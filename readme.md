@@ -1,6 +1,6 @@
 ﻿# AZ-500 Azure 安全
 
-- **你是 MCT 吗？** - 了解我们的 [MCT GitHub 用户指南](https://microsoftlearning.github.io/MCT-User-Guide/)
+- **你是 MCT 吗？** - 了解我们的 [MCT GitHub 用户指南](https://microsoftlearning.github.io/MCT-User-Guide-ZH/)
 - **需要手动建立实验室教学吗？** - 可通过 [MicrosoftLearning / Docker-Build](https://github.com/MicrosoftLearning/Docker-Build) 存储库查看相关教学说明
 
 > 请务必使用 [MCT 课件论坛](https://www.microsoft.com/zh-cn/learning/mct-central.aspx)，了解课程内容的建议或一般评论。此外，你可以将相关漏洞和课程错误上报至 [课件支持论坛](https://trainingsupport.microsoft.com/zh-cn)。
