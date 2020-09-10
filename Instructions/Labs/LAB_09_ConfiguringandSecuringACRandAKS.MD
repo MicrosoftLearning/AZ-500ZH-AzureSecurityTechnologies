@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '09 - 配置和保护 ACR 和 AKS'
     module: 'Module 02 - Implement Platform Protection'

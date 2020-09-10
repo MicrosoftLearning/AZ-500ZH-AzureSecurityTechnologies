@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '10 - 密钥保管库（通过设置 Always Encrypted 来实现安全数据）'
     module: '模块 03 - 安全数据和应用程序'
