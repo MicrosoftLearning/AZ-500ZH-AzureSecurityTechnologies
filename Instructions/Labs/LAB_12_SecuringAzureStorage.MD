@@ -79,7 +79,7 @@ lab:
 
 1. 在 **“myVirtualNetwork”** 边栏选项卡上的 **“设置”** 部分，单击 **“子网”**。
 
-1. 在 **“myVirtualNetwork”** \| **“子网”**边栏选项卡上，单击 **“+ 子网”**。 
+1. 在 **“myVirtualNetwork”** \| **“子网”** 边栏选项卡上，单击 **“+ 子网”**。 
 
 1. 在 **“添加子网”** 边栏选项卡上，请指定以下设置（将其他设置保留为默认值）：
 
@@ -160,7 +160,7 @@ lab:
 
     |设置|数值|
     |---|---|
-    |源|任何|
+    |源|**任何**|
     |源端口范围|*|
     |目标|**VirtualNetwork**|
     |目标端口范围|**3389**|
@@ -267,7 +267,7 @@ lab:
     |资源组|**AZ500LAB12**|
     |虚拟机名称|**myVmPrivate**|
     |区域|**（美国）美国东部**|
-    |映像|Windows Server 2019 Datacenter|
+    |映像|**Windows Server 2019 Datacenter**|
     |用户名|**localadmin**|
     |密码|**Pa55w.rd1234**|
     |公共入站端口|**无**|
@@ -307,7 +307,7 @@ lab:
     |资源组|**AZ500LAB12**|
     |虚拟机名称|**myVmPublic**|
     |区域|**（美国）美国东部**|
-    |映像|Windows Server 2019 Datacenter|
+    |映像|**Windows Server 2019 Datacenter**|
     |用户名|**localadmin**|
     |密码|**Pa55w.rd1234**|
     |公共入站端口|**无**|
@@ -365,12 +365,12 @@ lab:
     ```powershell
     $connectTestResult = Test-NetConnection -ComputerName <storage_account_name>.file.core.windows.net -Port 445
     if ($connectTestResult.TcpTestSucceeded) {
-       ＃保存密码，以便驱动器在重新启动后将继续存在
+       #保存密码，以便驱动器在重新启动后将继续存在
        cmd.exe /C "cmdkey /add:`"<storage_account_name>.file.core.windows.net`" /user:`"Azure\<storage_account_name>`"  /pass:`"<storage_account_key>`""
        # 装载驱动器
        New-PSDrive -Name Z -PSProvider FileSystem -Root "\\<storage_account_name>.file.core.windows.net\my-file-share" -Persist
     } else {
-       Write-Error -Message“无法通过端口 445 访问 Azure 存储帐户。请检查以确保组织或 ISP 不会阻止端口 445，或使用 Azure P2S VPN、Azure S2S VPN 或 Express Route 来在其他端口上建立 SMB 通信隧道。”
+       Write-Error -Message "Unable to reach the Azure storage account via port 445. Check to make sure your organization or ISP is not blocking port 445, or use Azure P2S VPN, Azure S2S VPN, or Express Route to tunnel SMB traffic over a different port."
     }
     ```
     >**备注**：占位符 `<storage-account-name>` 代表托管文件共享的存储帐户的名称，而 `<storage_account_name>` 代表它的主键

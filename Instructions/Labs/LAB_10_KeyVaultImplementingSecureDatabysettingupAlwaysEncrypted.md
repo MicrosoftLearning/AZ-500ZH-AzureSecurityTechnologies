@@ -20,7 +20,7 @@ lab:
 
 在本实验室中，你将成功完成以下练习：
 
-- 练习 1 ：使用密钥和机密配置密钥保管库
+- 练习 1：使用密钥和机密配置密钥保管库
 - 练习 2：创建应用程序来演示如何使用密钥保管库进行加密
 
 ## 实验室文件：
@@ -29,11 +29,11 @@ lab:
 - **Allfiles\\Labs\\10\\az-500-10_azuredeploy.parameters.json**
 - **Allfiles\\Labs\\10\\program.cs**
  
-### 练习 1 ：使用密钥和机密配置密钥保管库
+### 练习 1：使用密钥和机密配置密钥保管库
 
 ### 预计用时：60 分钟
 
-> 对于本实验室中的所有资源，我们正在使用**东部（美国）**地区。与你的教师确认这是你上课时使用的区域。 
+> 对于本实验室中的所有资源，我们正在使用 **东部（美国）** 地区。与你的教师确认这是你上课时使用的区域。 
 
 在该练习中，你将完成以下任务：
 
@@ -48,7 +48,7 @@ lab:
 
 在此任务中，你将部署 Azure VM，连接它，并下载和安装 Visual Studio 2019 和 SQL Server Management Studio (SSMS)。
 
-1. 登录 Azure 门户 `https://portal.azure.com/`。
+1. 登录 Azure 门户 **`https://portal.azure.com/`**。
 
     >**注意**：使用此实验室使用的 Azure 订阅中具有所有者或参与者角色的帐户登录 Azure 门户。
 
@@ -72,7 +72,7 @@ lab:
    |---|---|
    |订阅|在本次实验室中你将使用的 Azure 订阅名|
    |资源组|单击 **“新建”** 并键入名称 **“AZ500LAB10”**|
-   |地点|（美国）美国东部|
+   |地点|**（美国）美国东部**|
    |VM 大小|**“Standard_D2s_v3”**|
    |VM 名称|**az500-10-vm1**|
    |管理员用户名|**Student**|
@@ -116,7 +116,7 @@ lab:
 
 1. 启动 Visual Studio 2019 社区版的下载和安装。出现提示时，在 **“Visual Studio 安装程序”** 窗口中，单击 **“继续”**。
 
-1. 出现提示时，在 **“工作负载”** 窗口中的 **“台式计算机机和移动设备”** 部分，选择 **“NET桌面开发”** 复选框，然后点击 **“安装”*。
+1. 出现提示时，在 **“工作负载”** 窗口中的 **“台式计算机机和移动设备”** 部分，选择 **“.NET桌面开发”** 复选框，然后点击 **“\安装”*。
 
     >**注意**：继续下一步，无需等待 Visual Studio 2019 安装完成。 
 
@@ -171,7 +171,7 @@ lab:
     |证书权限|单击 **“全选”** 会导致总计 **“已选 16 个”** 权限|
     |选择主体|单击 **“未选择”**，在 **“主体”** 边栏选项卡，选择你的用户帐户，然后单击 **“选择”**|
 
-1. 回到 **“添加访问策略”** 边栏选项卡，单击 **“添加”** 以添加访问策略，然后回到密钥保管库的“访问策略”边栏选项卡，单击 **“保存”**以保存你的更改。 
+1. 回到 **“添加访问策略”** 边栏选项卡，单击 **“添加”** 以添加访问策略，然后回到密钥保管库的“访问策略”边栏选项卡，单击 **“保存”** 以保存你的更改。 
 
 #### 任务 3：向密钥保管库添加密钥
 
@@ -227,7 +227,7 @@ lab:
 1.  在“Cloud Shell ”窗格的 PowerShell 会话中，运行以下命令将机密添加到保管库：
 
     ```powershell
-    $secret = Set-AZKeyVaultSecret -VaultName $kv.VaultName -Name 'SQLPassword' -SecretValue $secretvalue
+    $secret = Set-AZKeyVaultSecret -VaultName $kv.VaultName -Name 'SQLPassword' -SecretValue $secretvalue
     ```
 
     >**注意**：机密名称为 SQLPassword。 
@@ -286,7 +286,7 @@ lab:
 
 1. 在 **“sqlApp”** 边栏选项卡的 **“管理”** 部分，单击**证书和机密**。
 
-1. 在“sqlApp”** \| 在 **“证书和机密”** 边栏选项卡上，单击 **“新客户端密码”**。
+1. 在 **“sqlApp”** \| 在 **“证书和机密”** 边栏选项卡上，单击 **“新客户端密码”**。
 
 1. 在 **“添加客户端机密”** 窗格中，指定以下设置：
 
@@ -315,7 +315,7 @@ lab:
 1. 在 “Cloud Shell” 窗格中的 PowerShell 会话中，运行以下命令创建存储上一个任务中记录的**应用程序（客户端）ID**的变量（用 **Application (client) ID**的值替换 `<Azure_AD_Application_ID>` 占位符）：
    
     ```powershell
-    $applicationId = '<Azure_AD_Application_ID>”
+    $applicationId = '<Azure_AD_Application_ID>'
     ```
 1. 在 Cloud Shell 窗格中的 PowerShell 会话中，运行以下命令创建存储密钥保管库名称的变量。
 	```
@@ -346,14 +346,14 @@ lab:
     |资源组|**AZ500LAB10**|
     |数据库名称|**医疗**|
 
-1. 在服**务器**下拉列表下方，单 **击“新建”**， 并在 **“新建服务器”** 边栏选项卡，指定以下设置并单击 **“确定”**（其他设置保留默认值）：
+1. 在服**务器**下拉列表下方，单击 **“新建”**， 并在 **“新建服务器”** 边栏选项卡，指定以下设置并单击 **“确定”**（其他设置保留默认值）：
 
     |设置|数值|
     |---|---|
     |服务器名称|任何有效的全局唯一名称|
     |服务器管理员登录|**Student**|
     |密码|**Pa55w.rd1234**|
-    |位置|（美国）美国东部|
+    |位置|**（美国）美国东部**|
 
 1. 单击 **“审阅+创建”**，然后单击 **“创建”**。 
 
@@ -384,7 +384,7 @@ lab:
 
     >**备注**：此操作将修改服务器防火墙设置，从而允许从与当前使用的计算机关联的公用 IP 地址连接到 medical 数据库。 
 
-1. 单击 **“开始”**， 在 **“开始”** 菜单中，展开 **“Microsoft SQL Server Tools 18”** 文件夹，然后单击 **“Micosoft SQL Server Management Studio”**菜单项。
+1. 单击 **“开始”**， 在 **“开始”** 菜单中，展开 **“Microsoft SQL Server Tools 18”** 文件夹，然后单击 **“Micosoft SQL Server Management Studio”** 菜单项。
 
 1. 在 **“连接到服务器”** 对话框中，指定以下设置： 
 
@@ -405,7 +405,7 @@ lab:
 1. 将以下代码粘贴到查询窗口中，然后单击 **“执行”**。这将创建一**个患者**表。
 
      ```sql
-     创建表 [dbo].[Patients](
+     CREATE TABLE [dbo].[Patients](
 		[PatientId] [int] IDENTITY(1,1),
 		[SSN] [char](11) NOT NULL,
 		[FirstName] [nvarchar](50) NULL,
@@ -415,8 +415,8 @@ lab:
 		[City] [nvarchar](50) NULL,
 		[ZipCode] [char](5) NULL,
 		[State] [char](2) NULL,
-		[BirthDate] [date] 非 NULL 
-     主密钥聚集 ([PatientId] ASC) 开 [PRIMARY] );
+		[BirthDate] [date] NOT NULL 
+     PRIMARY KEY CLUSTERED ([PatientId] ASC) ON [PRIMARY] );
      ```
 1. 成功创建表后，在 **“对象浏览器”** 窗格中，展开 **“medical”** 数据库节点、 **“表”** 节点，右键单击 **“dbo.Patients”** 节点，然后单击 **“加密列”**。 
 
