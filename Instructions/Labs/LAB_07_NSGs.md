@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '07 - Network Security Groups and Application Security Groups'
     module: 'Module 02 - Implement Platform Protection'
