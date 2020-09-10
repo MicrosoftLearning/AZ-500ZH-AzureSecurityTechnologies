@@ -1,6 +1,6 @@
 ﻿---
 lab:
-    title: ' 12 - Service Endpoints and Securing Storage'
+    title: '12 - 服务终结点和保护存储'
     module: '模块 03 - 安全数据和应用程序'
 ---
 

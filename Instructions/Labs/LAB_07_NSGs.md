@@ -1,6 +1,6 @@
 ﻿---
 lab:
-    title: '07 - Network Security Groups and Application Security Groups'
+    title: '07 - 网络安全组和应用程序安全组'
     module: 'Module 02 - Implement Platform Protection'
 ---
 
