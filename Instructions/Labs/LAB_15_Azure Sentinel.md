@@ -1,7 +1,7 @@
 ---
 lab:
     title: '15 - Azure Sentinel'
-     module: '模块 04 - 管理安全操作'
+    module: '模块 04 - 管理安全操作'
 ---
 
 # 实验室 15：Azure Sentinel
