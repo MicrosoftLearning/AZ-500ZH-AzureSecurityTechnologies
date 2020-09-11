@@ -1,6 +1,6 @@
 ﻿# AZ-500（预览版）：Microsoft Azure 安全技术
 
-- **[链接到实验室（HTML 格式）](https://microsoftlearning.github.io/AZ500ZH-AzureSecurityTechnologies/)**
+- **[链接到实验室（HTML 格式）](https://microsoftlearning.github.io/AZ-500ZH-AzureSecurityTechnologies/)**
 
 - **你是 MCT 吗？** - 请查看[适用于 MCT 的 GitHub 用户指南](https://microsoftlearning.github.io/MCT-User-Guide-ZH/)
 
