@@ -1,4 +1,4 @@
-﻿# AZ-500（预览版）：Microsoft Azure 安全技术
+﻿# AZ-500：Microsoft Azure 安全技术
 
 - **[链接到实验室（HTML 格式）](https://microsoftlearning.github.io/AZ-500ZH-AzureSecurityTechnologies/)**
 
