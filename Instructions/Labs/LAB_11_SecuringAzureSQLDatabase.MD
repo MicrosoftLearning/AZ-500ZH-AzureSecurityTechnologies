@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '11 - 保护 Azure SQL 数据库'
     module: '模块 03 - 保护数据和应用程序'
