@@ -167,7 +167,7 @@ lab:
 
 1. 在 **“我的角色 \| Azure AD 角色”** 边栏选项卡上，切换到 **“活动分配”** 选项卡。注意 **“计费管理员”** 角色是 **“已激活”** 状态。
 
-    >**备注**： 角色激活后，当达到“结束时间”** （符合条件的持续时间）下的时间限制时，它将自动停用。
+    >**备注**： 角色激活后，当达到 **“结束时间”** （符合条件的持续时间）下的时间限制时，它将自动停用。
 
     >**备注**： 如果提早完成管理员任务，可以手动停用角色。
 
@@ -359,4 +359,4 @@ lab:
 
 1. 导航回 **“删除目录 ‘AdatumLab500-04’”** 边栏选项卡，然后单击 **“删除”**。
 
-> 有关此任务的更多信息，请参阅 [https://docs.microsoft.com/zh-cn/azure/active-directory/users-groups-roles/directory-delete-howto](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-delete-howto)
+> 有关此任务的更多信息，请参阅 [https://docs.microsoft.com/zh-cn/azure/active-directory/users-groups-roles/directory-delete-howto](https://docs.microsoft.com/zh-cn/azure/active-directory/users-groups-roles/directory-delete-howto)

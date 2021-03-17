@@ -73,7 +73,7 @@ lab:
    |资源组|单击 **“新建”** 并键入名称 **AZ500LAB08**|
    |位置|**（美国）美国东部**|
 
-    >**备注**： 若要标识可在其中预配 Azure VM 的 Azure 区域，请参阅 [**https://azure.microsoft.com/zh-cn/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
+    >**备注**： 若要标识可在其中预配 Azure VM 的 Azure 区域，请参阅 [**https://azure.microsoft.com/zh-cn/regions/offers/**](https://azure.microsoft.com/zh-cn/regions/offers/)
 
 1. 单击 **“查看 + 创建”**，然后单击 **“创建”**。
 

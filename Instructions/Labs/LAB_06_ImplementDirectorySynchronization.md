@@ -54,7 +54,7 @@ lab:
 
     >**备注**： 将 `<custom-label>` 占位符替换为可能是全局唯一的有效 DNS 名称。将 `<location>` 占位符替换为要将 Azure VM 部署到其中的区域的名称，该 Azure VM 将托管在本实验室中使用的 Active Directory 域控制器。
 
-    >**备注**： 若要标识可在其中预配 Azure VM 的 Azure 区域，请参阅 [**https://azure.microsoft.com/zh-cn/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
+    >**备注**： 若要标识可在其中预配 Azure VM 的 Azure 区域，请参阅 [**https://azure.microsoft.com/zh-cn/regions/offers/**](https://azure.microsoft.com/zh-cn/regions/offers/)
 
 1. 验证命令是否返回 **True**。如果没有，请使用不同的 `<custom-label>` 值重新运行相同的命令，直到命令返回为 **True** 为止。
 
@@ -108,7 +108,7 @@ lab:
 
 在此任务中，你将新建一个在此实验室中使用的新 Azure AD 租户。 
 
-1. 在 Azure 门户页面顶部的 **“搜索资源、服务和文档”** *文本框中，键入 **“Azure Active Directory”**，然后按 **“Enter”** 键。
+1. 在 Azure 门户页面顶部的 **“搜索资源、服务和文档”** 文本框中，键入 **“Azure Active Directory”**，然后按 **“Enter”** 键。
 
 1. 在显示当前 Azure AD 租户的 **“概述”** 边栏选项卡上，单击 **“+ 创建租户”**。
 
@@ -124,7 +124,7 @@ lab:
 
     >**备注**： 记录初始域名。稍后将在本实验室用到它。
 
-    >**备注**： “初始域名”** 文本框中的绿色复选标记将指示你键入的域名是否有效且唯一。（记录初始域名以供以后使用）。
+    >**备注**： **“初始域名”** 文本框中的绿色复选标记将指示你键入的域名是否有效且唯一。（记录初始域名以供以后使用）。
 
 1. 单击 **“查看 + 创建”**，然后单击 **“创建”**。
 
@@ -148,7 +148,7 @@ lab:
 
 1. 在 **“adatum.com”** 边栏选项卡上，查看执行 Azure AD 域名验证所需的信息。
 
-    >**备注**： 由于你没有 adatum.com**** DNS 域名，因此你将无法完成验证过程。这不会阻止你将 **adatum.com** AD DS 域与 Azure AD 租户同步。为此，你将使用 Azure AD 租户的初始 DNS 名称（其名称以 **onmicrosoft.com** 后缀结尾），该名称在上一个任务中已标识。但是，请记住，Active Directory 域的 DNS 域名和 Azure AD 租户的 DNS 名称因此将有所不同。这意味着，Adatum 用户在登录 AD DS 域和登录 Azure AD 租户时需要使用不同的名称。
+    >**备注**： 由于你没有 **adatum.com** DNS 域名，因此你将无法完成验证过程。这不会阻止你将 **adatum.com** AD DS 域与 Azure AD 租户同步。为此，你将使用 Azure AD 租户的初始 DNS 名称（其名称以 **onmicrosoft.com** 后缀结尾），该名称在上一个任务中已标识。但是，请记住，Active Directory 域的 DNS 域名和 Azure AD 租户的 DNS 名称因此将有所不同。这意味着，Adatum 用户在登录 AD DS 域和登录 Azure AD 租户时需要使用不同的名称。
 
 #### 任务 3：使用全局管理员角色创建 Azure AD 用户
 
@@ -249,7 +249,7 @@ lab:
 
 在此任务中，你将在虚拟机上安装 AD Connect。 
 
-1. 在与 **adVM** 的远程桌面会话中，启动 Internet Explorer，导航至 [Azure 门户](https://portal.azure.com)，然后使用你在上一个练习中创建的 syncadmin**** 用户帐户登录。出现提示时，指定你记录的完整用户名以及“Pa55w.rd1234”****密码。
+1. 在与 **adVM** 的远程桌面会话中，启动 Internet Explorer，导航至 [Azure 门户](https://portal.azure.com)，然后使用你在上一个练习中创建的 **syncadmin** 用户帐户登录。出现提示时，指定你记录的完整用户名以及 **“Pa55w.rd1234”** 密码。
 
 1. 在 Azure 门户页面顶部的 **“搜索资源、服务和文档”** 文本框中，键入 **“Azure Active Directory”**，然后按 **“Enter”** 键。
 
@@ -401,4 +401,4 @@ lab:
 
 1. 导航回 **“删除目录 ‘AdatumSync’”** 边栏选项卡，然后单击 **“删除”**。
 
-> 有关此任务的更多信息，请参阅 [https://docs.microsoft.com/zh-cn/azure/active-directory/users-groups-roles/directory-delete-howto](https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-delete-howto)
+> 有关此任务的更多信息，请参阅 [https://docs.microsoft.com/zh-cn/azure/active-directory/users-groups-roles/directory-delete-howto](https://docs.microsoft.com/zh-cn/azure/active-directory/users-groups-roles/directory-delete-howto)

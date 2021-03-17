@@ -1,6 +1,6 @@
 ﻿---
 lab:
-    title: '10 - 密钥保管库（通过设置 Always Encrypted 来实现保护数据）'
+    title: '10 - 密钥保管库（通过设置 Always Encrypted 来实现安全数据）'
     module: '模块 03 - 保护数据和应用程序'
 ---
 
@@ -69,7 +69,7 @@ lab:
    
     >**备注**： 虽然可以更改用于登录虚拟机的管理凭据，但你不必这样做。
 
-    >**备注**： 若要标识可在其中预配 Azure VM 的 Azure 区域，请参阅 [**https://azure.microsoft.com/zh-cn/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
+    >**备注**： 若要标识可在其中预配 Azure VM 的 Azure 区域，请参阅 [**https://azure.microsoft.com/zh-cn/regions/offers/**](https://azure.microsoft.com/zh-cn/regions/offers/)
 
 1. 单击 **“查看和创建”** 按钮，然后单击 **“创建”** 按钮确认部署。 
 
@@ -363,7 +363,7 @@ lab:
 
 1. 在 **“连接到服务器”** 对话框中，单击 **“连接”**。
 
-1. 在 **“SQL Server Management Studio”** 控制台，在 **“对象浏览器”** 窗格，展开 **“数据库”**文件夹。
+1. 在 **“SQL Server Management Studio”** 控制台，在 **“对象浏览器”** 窗格，展开 **“数据库”** 文件夹。
 
 1. 在 **“对象资源管理器”** 窗格，右键单击 **“医疗”** 数据库，然后单击 **“新查询”**。
 
@@ -443,7 +443,7 @@ lab:
 
 1. 切换到 Visual Studio 控制台，在 **“解决方案资源管理器”** 窗口，单击 **“Program.cs”** 并将其内容替换为复制到剪贴板中的代码。
 
-1. 在 Visual Studio 窗口中， **“Program.cs”** *窗格中的第 15 行，用你之前在本实验室中记录的 Azure SQL 数据库 **“ADO.NET”** 连接字符串替换 `<connection string noted earlier>` 占位符。在连接字符串中，将 `{your_password}` 占位符替换为 `Pa55w.rd1234`。
+1. 在 Visual Studio 窗口中， **“Program.cs”** 窗格中的第 15 行，用你之前在本实验室中记录的 Azure SQL 数据库 **“ADO.NET”** 连接字符串替换 `<connection string noted earlier>` 占位符。在连接字符串中，将 `{your_password}` 占位符替换为 `Pa55w.rd1234`。
 
 1. 在 Visual Studio 窗口的 **“Program.cs”** 窗格中的第 16 行，将 `<client id noted earlier>` 占位符替换为你之前在实验室中记录的注册应用的 **“应用程序(客户端) ID”** 值。 
 
@@ -469,7 +469,7 @@ lab:
     999-99-0003
     ```
 
-    >备注****：验证查询返回的数据未加密。
+    >**备注**：验证查询返回的数据未加密。
 
 1. 要终止控制台应用，请按 Enter 键
 

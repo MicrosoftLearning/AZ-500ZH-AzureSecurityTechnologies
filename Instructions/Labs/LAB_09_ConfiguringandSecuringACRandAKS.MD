@@ -148,9 +148,9 @@ lab:
 	
 1. 单击 **“下一步: 身份验证 >”**，在 **“创建 Kubernetes 群集”** 边栏选项卡的 **“身份验证”** 选项卡中，接受默认设置，然后单击 **“下一步: 网络 >”**。 
 
-    >**备注**： 你将创建一个群集基础结构服务主体，Kubernetes 群集将使用该主体来管理附加到该群集的云资源。有关更多信息，请访问[使用 Azure Kubernetes 服务的服务主体](https://docs.microsoft.com/en-us/azure/aks/kubernetes-service-principal)页。
+    >**备注**： 你将创建一个群集基础结构服务主体，Kubernetes 群集将使用该主体来管理附加到该群集的云资源。有关更多信息，请访问[使用 Azure Kubernetes 服务的服务主体](https://docs.microsoft.com/zh-cn/azure/aks/kubernetes-service-principal)页。
 
-    >**备注**： 你将为 Kubernetes 启用基于角色的访问控制。有关更多信息，请访问[将 Azure Active Directory 与 Azure Kubernetes 服务集成](https://docs.microsoft.com/en-us/azure/aks/azure-ad-integration)页。 
+    >**备注**： 你将为 Kubernetes 启用基于角色的访问控制。有关更多信息，请访问[将 Azure Active Directory 与 Azure Kubernetes 服务集成](https://docs.microsoft.com/zh-cn/azure/aks/azure-ad-integration)页。 
 
 1. 在 **“创建 Kubernetes 群集”** 边栏选项卡的 **“联网”** 选项卡中，指定以下设置（将其他设置保留为默认值）：
 
@@ -159,7 +159,7 @@ lab:
     |网络配置|**Azure CNI**|
     |DNS 名称前缀|任何全局唯一的有效 DNS 主机名|
 
-    >**备注**： 可将 AKS 配置为专用群集。这会将专用 IP 分配给 API 服务器，以确保 API 服务器与节点池之间的网络流量仅保留在专用网络上。有关更多信息，请访问[创建专用 Azure Kubernetes 服务群集](https://docs.microsoft.com/en-us/azure/aks/private-clusters)页。
+    >**备注**： 可将 AKS 配置为专用群集。这会将专用 IP 分配给 API 服务器，以确保 API 服务器与节点池之间的网络流量仅保留在专用网络上。有关更多信息，请访问[创建专用 Azure Kubernetes 服务群集](https://docs.microsoft.com/zh-cn/azure/aks/private-clusters)页。
 
 1. 单击 **“下一步: 集成 >”**，然后在 **“创建 Kubernetes 群集”** 边栏选项卡的 **“集成”** 选项卡中，将 **“容器监视”** 设置为 **“禁用”**。 
 
@@ -345,7 +345,7 @@ lab:
 
 1. 在 Azure 门户中，通过单击 Azure 门户右上角的第一个图标打开 Cloud Shell。 
 
-1. 在“Cloud Shell”窗格的左上下拉菜单中，选择 **“PowerShell”** 并在出现提示时单击 **“确认”***。
+1. 在“Cloud Shell”窗格的左上下拉菜单中，选择 **“PowerShell”** 并在出现提示时单击 **“确认”**。
 
 1. 在“Cloud Shell”窗格中的 PowerShell 会话中，运行以下命令以删除你在此实验室中创建的资源组：
   

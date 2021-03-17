@@ -80,7 +80,7 @@ lab:
    |管理员密码|**Pa55w.rd1234**|
    |虚拟网络名称|**az500-04-vnet1**|
 
-    >**备注**： 若要标识可在其中预配 Azure VM 的 Azure 区域，请参阅 [**https://azure.microsoft.com/zh-cn/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
+    >**备注**： 若要标识可在其中预配 Azure VM 的 Azure 区域，请参阅 [**https://azure.microsoft.com/zh-cn/regions/offers/**](https://azure.microsoft.com/zh-cn/regions/offers/)
 
 1. 单击 **“查看 + 创建”**，然后单击 **“创建”**。
 
@@ -277,7 +277,7 @@ lab:
 
     >**备注**： 至此，你已经为 aaduser1 启用了 MFA，并设置了欺诈警报设置。 
 
-1. 导航回 **AdatumLab500-04**** Azure Active Directory 租户边栏选项卡，在 **“管理”** 部分中，单击 **“属性”**，然后单击边栏选项卡底部的 **“管理安全默认值”** 链接，在 **“启用安全默认值”** 边栏选项卡上，单击 **“否”**。选择 **“我的组织正在使用条件访问”** 作为原因，然后单击 **“保存”**。
+1. 导航回 **AdatumLab500-04** Azure Active Directory 租户边栏选项卡，在 **“管理”** 部分中，单击 **“属性”**，然后单击边栏选项卡底部的 **“管理安全默认值”** 链接，在 **“启用安全默认值”** 边栏选项卡上，单击 **“否”**。选择 **“我的组织正在使用条件访问”** 作为原因，然后单击 **“保存”**。
 
     >**备注**： 确保已登录 **AdatumLab500-4b** Azure AD 租户。你可以使用 **“目录 + 订阅”** 筛选器在 Azure AD 租户之间切换。确保以在 Azure AD 租户中具有全局管理员角色的用户身份登录。
 
