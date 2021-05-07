@@ -1,4 +1,4 @@
----
+﻿---
 lab:
     title: '01 - 基于角色的访问控制'
     module: '第 01 单元 - 管理标识和访问权限'
@@ -23,7 +23,7 @@ lab:
 在本实验室中，你将完成以下练习
 
 - 练习 1：使用用户帐户以组成员 Joseph Price 身份创建高级管理员组（Azure 门户）。 
-- 练习 2：使用用户帐户 Isabel Garcia 作为组成员 (PowerShell) 创建初级管理员组。
+- 练习2：使用用户帐户 Isabel Garcia 作为组成员 (PowerShell) 创建初级管理员组。
 - 练习 3：创建服务台组，以用户 Dylan Williams 作为其组成员 (Azure CLI) 。 
 - 练习 4：将虚拟机参与者角色分配给“服务台”组。
 
@@ -61,7 +61,7 @@ lab:
 
 1. 单击 **“创建”**。
 
-1. 刷新 **“用户\ | 全部用户”** 边栏选项卡，以验证新用户是否在 Azure AD 租户中创建。
+1. 刷新 **“用户 \| 全部用户”** 边栏选项卡，以验证新用户是否在 Azure AD 租户中创建。
 
 #### 任务 2：使用 Azure 门户创建高级管理员组，并将 Joseph Price 用户帐户添加到该组。
 
@@ -87,7 +87,7 @@ lab:
 
 > 结果：你使用 Azure 门户创建了一个用户和一个组，并将该用户分配给了该组。 
 
-### 练习 2：创建一个初级管理员组，其中包含 Isabel Garcia 的用户帐户作为该组的成员。
+### 练习2：创建一个初级管理员组，其中包含 Isabel Garcia 的用户帐户作为该组的成员。
 
 #### 预计用时：10 分钟
 
@@ -100,7 +100,7 @@ lab:
 
 在此任务中，你将使用 PowerShell 为 Isabel Garcia 创建一个用户帐户。
 
-1. 单击 Azure 门户右上角的第一个图标，打开 Cloud Shell。如果出现提示，请选择 **“PowerShell”** 和 **“创建存储”**。
+1. 单击 Azure 门户右上角的第一个图标，打开 Cloud Shell。如果出现提示，请选择 **“PowerShell”** 和 **“创建储存”**。
 
 1. 确保在“Cloud Shell”窗格左上角的下拉菜单中选中 **“PowerShell”**。
 
@@ -199,7 +199,7 @@ lab:
     DOMAINNAME=$(az ad signed-in-user show --query 'userPrincipalName' | cut -d '@' -f 2 | sed 's/\"//')
     ```
 
-1. 在“Cloud Shell”窗格内的 Bash 会话中，运行以下命令以创建 Dylan Williams 用户。使用 *yourdomain*。
+1. 在“Cloud Shell”窗格内的 Bash 会话中，运行以下命令以创建 Dylan Williams 用户。使用 yourdomain**。
  
     ```cli
     az ad user create --display-name "Dylan Williams" --password "Pa55w.rd1234" --user-principal-name Dylan@$DOMAINNAME
@@ -269,7 +269,7 @@ lab:
 
 1. 在 Azure 门户页面顶部的 **“搜索资源、服务和文档”** 文本框中，键入 **“资源组”**，然后按 **Enter** 键。
 
-1. 在 **“资源组”** 边栏选项卡上，单击 **“+ 添加”** 并指定以下设置：
+1. 在 **“资源组”** 边栏选项卡上单击 **“+ 新建”**，并指定以下设置：
 
    |设置|值|
    |---|---|
@@ -279,7 +279,7 @@ lab:
 
 1. 单击 **“查看 + 创建”**，然后单击 **“创建”**。
 
-   >**备注**：等待资源组以便部署。使用 **“通知”** 图标（右上角）跟踪部署状态的进度。
+   >**备注**： 等待资源组以便部署。使用 **“通知”** 图标（右上角）跟踪部署状态的进度。
 
 1. 返回 **“资源组”** 边栏选项卡，刷新页面并验证新资源组是否出现在资源组列表中。
 

@@ -1,7 +1,7 @@
----
+﻿---
 lab:
-    title: '09 - 配置 ACR 和 AKS 并对其进行保护'
-    module: '模块 02 - 实现平台保护'
+    title: '配置 ACR 和 AKS 并对其进行保护'
+    module: 'Module 02 - Implement Platform Protection'
 ---
 
 # 实验室 09：配置 ACR 和 AKS 并对其进行保护
@@ -128,7 +128,7 @@ lab:
 
 1. 在 **“Kubernetes 服务”** 边栏选项卡上，单击 **“+ 添加”**，然后在下拉菜单中单击 **“+ 添加 Kubernetes 群集”**。
 
-1. 在 **“创建 Kubernetes 群集”** 边栏选项卡的 **“基本设置”** 选项卡中，指定以下设置（其他设置则保留为默认值）：
+1. 在 **“创建 Kubernetes 群集”** 边栏选项卡的 **“基本设置”** 选项卡中，指定以下设置（将其他设置保留为默认值）：
 
     |设置|值|
     |----|----|
@@ -139,27 +139,23 @@ lab:
     |可用性区域 |**无**|
     |节点计数|1|
 
-1. 单击 **“下一步: 节点池 >”**，然后在 **“创建 Kubernetes 群集”** 边栏选项卡的 **“节点池”** 选项卡中，指定以下设置（其他设置则保留为默认值）：
+1. 单击 **“下一步: 节点池 >”**，然后在 **“创建 Kubernetes 群集”** 边栏选项卡的 **“节点池”** 选项卡中，指定以下设置（将其他设置保留为默认值）：
 
     |设置|值|
     |----|----|
-    |虚拟节点|清除复选框|
+    |启用虚拟节点|清除复选框|
     |VM 规模集|清除复选框|
 	
 1. 单击 **“下一步: 身份验证 >”**，在 **“创建 Kubernetes 群集”** 边栏选项卡的 **“身份验证”** 选项卡中，接受默认设置，然后单击 **“下一步: 网络 >”**。 
-
-    >**备注**： 你将创建一个群集基础结构服务主体，Kubernetes 群集将使用该主体来管理附加到该群集的云资源。有关更多信息，请访问[使用 Azure Kubernetes 服务的服务主体](https://docs.microsoft.com/zh-cn/azure/aks/kubernetes-service-principal)页。
-
-    >**备注**： 你将为 Kubernetes 启用基于角色的访问控制。有关更多信息，请访问[将 Azure Active Directory 与 Azure Kubernetes 服务集成](https://docs.microsoft.com/zh-cn/azure/aks/azure-ad-integration)页。 
 
 1. 在 **“创建 Kubernetes 群集”** 边栏选项卡的 **“联网”** 选项卡中，指定以下设置（将其他设置保留为默认值）：
 
     |设置|值|
     |----|----|
     |网络配置|**Azure CNI**|
-    |DNS 名称前缀|任何全局唯一的有效 DNS 主机名|
+    |DNS 名称前缀|任何有效且全球唯一的 DNS 主机名|
 
-    >**备注**： 可将 AKS 配置为专用群集。这会将专用 IP 分配给 API 服务器，以确保 API 服务器与节点池之间的网络流量仅保留在专用网络上。有关更多信息，请访问[创建专用 Azure Kubernetes 服务群集](https://docs.microsoft.com/zh-cn/azure/aks/private-clusters)页。
+    >**注意**： 可将 AKS 配置为专用群集。这会将专用 IP 分配给 API 服务器，以确保 API 服务器与节点池之间的网络流量仅保留在专用网络上。有关更多信息，请访问[创建专用 Azure Kubernetes 服务群集](https://docs.microsoft.com/zh-cn/azure/aks/private-clusters)页。
 
 1. 单击 **“下一步: 集成 >”**，然后在 **“创建 Kubernetes 群集”** 边栏选项卡的 **“集成”** 选项卡中，将 **“容器监视”** 设置为 **“禁用”**。 
 
@@ -193,11 +189,11 @@ lab:
     kubectl get nodes
     ```
 
-    >**备注**： 验证 **“状态”** 是否列为 **“就绪”**。
+    >**备注**： 验证列出的群集节点状态是否为 **“就绪”**。
 
-#### 任务 4：授予 AKS 群集访问 ACR 的权限
+#### 任务 4：授予 AKS 群集访问 ACR 和管理 ACR 虚拟网络的权限
 
-在此任务中，你将授予 AKS 群集访问 ACR 的权限。 
+在该任务中，你将授予 AKS 群集访问 ACR 和管理 ACR 虚拟网络的权限。 
 
 1. 在“Cloud Shell”窗格的 Bash 会话中，运行以下命令以将 AKS 群集配置为使用在本实验室前面部分创建的 Azure 容器注册表实例。 
 
@@ -207,9 +203,25 @@ lab:
     az aks update -n MyKubernetesCluster -g AZ500LAB09 --attach-acr $ACRNAME
     ```
 
-    >**备注**： 此命令将“acrpull”角色分配给 ACR。 
+    >**备注**： 该命令将 'acrpull' 角色分配给 ACR。 
 
     >**备注**： 此命令需要几分钟时间才能完成操作。 
+
+1. 在“Cloud Shell”窗格中的 Bash 会话中，运行以下命令以授予 AKS 群集对其虚拟网络的“参与者”角色。 
+
+    ```sh
+    RG_AKS=AZ500LAB09
+    
+    AKS_VNET_NAME=AZ500LAB09-vnet
+    
+    AKS_CLUSTER_NAME=MyKubernetesCluster
+    
+    AKS_VNET_ID=$(az network vnet show --name $AKS_VNET_NAME --resource-group $RG_AKS --query id -o tsv)
+    
+    AKS_MANAGED_ID=$(az aks show --name $AKS_CLUSTER_NAME --resource-group $RG_AKS --query identity.principalId -o tsv)
+    
+    az role assignment create --assignee $AKS_MANAGED_ID --role "Contributor" --scope $AKS_VNET_ID
+    ```
 
 #### 任务 5：将外部服务部署到 AKS
 
@@ -223,7 +235,7 @@ lab:
     echo $ACRNAME
     ```
 
-    >**备注**： 记录 Azure 容器注册表实例名称。稍后你将在此任务中使用它。
+    >**备注**：记录 Azure 容器注册表实例名称。稍后你将在此任务中使用它。
 
 1. 在 Cloud Shell 窗格中的 Bash 会话中，运行以下命令以打开 nginxexternal.yaml 文件，以便你可以编辑其内容。 
 
@@ -231,9 +243,9 @@ lab:
     code ./nginxexternal.yaml
     ```
 
-    >**备注**： 这是*外部* yaml 文件。
+    >**备注**： 这*是外部* yaml 文件。
 
-1. 在编辑器窗格中，向下滚动到第 **24 行** 并将  **`<ACRUniquename>`** 占位符替换为 ACR 名称。
+1. 在编辑器窗格中，向下滚动到第 **24 行** 并将 **`<ACRUniquename>`** 占位符替换为 ACR 名称。
 
 1. 在编辑器窗格的右上角，单击**省略号**图标，单击 **“保存”**，然后单击 **“关闭编辑器”**。 
 
@@ -276,7 +288,7 @@ lab:
     code ./nginxinternal.yaml
     ```
 
-    >**备注**： 这是*内部* yaml 文件。
+    >**备注**：这是内部** yaml 文件。
 
 1. 在编辑器窗格中，向下滚动到包含对容器映像的引用的行并将 **`<ACRUniquename>`** 占位符替换为 ACR 名称。
 
@@ -307,6 +319,7 @@ lab:
 
     >**备注**： 要访问内部服务终结点，需要以交互方式连接到群集中运行的其中一个 Pod。 
 
+    >**备注**： 或者可以使用 CLUSTER-IP 地址。
 
 #### 任务 8：验证你是否可以访问 AKS 托管的内部服务
 
