@@ -294,7 +294,7 @@ lab:
 
 1. 浏览到 **`http://www.microsoft.com/`**
 
-    >**备注**： 在浏览器页面中，你应该收到一条消息，其内容类似于以下内容： `从 10.0.2.4:xxxxx 到 microsoft.com:80 的 HTTP 请求。操作：拒绝。没有匹配的规则。Proceeding with default action.` 这是正常的，因为防火墙阻止了对该网站的访问。 
+    >**备注**： 在浏览器页面中，你应该收到一条消息，其内容类似于以下内容： `HTTP request from 10.0.2.4:xxxxx to microsoft.com:80. Action: Deny. No rule matched. Proceeding with default action.` 这是正常的，因为防火墙阻止了对该网站的访问。 
 
 1. 终止两个远程桌面会话。
 

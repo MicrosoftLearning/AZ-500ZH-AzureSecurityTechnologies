@@ -288,7 +288,7 @@ lab:
     code ./nginxinternal.yaml
     ```
 
-    >**备注**：这是内部** yaml 文件。
+    >**备注**： *这是内部* yaml 文件。
 
 1. 在编辑器窗格中，向下滚动到包含对容器映像的引用的行并将 **`<ACRUniquename>`** 占位符替换为 ACR 名称。
 
