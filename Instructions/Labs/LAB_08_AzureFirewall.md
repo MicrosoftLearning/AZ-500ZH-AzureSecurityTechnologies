@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '08 - Azure 防火墙'
     module: 'Module 02 - Implement Platform Protection'
