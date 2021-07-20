@@ -1,4 +1,4 @@
----
+﻿---
 lab:
     title: '06 - 实现目录同步'
     module: '第 01 单元 - 管理标识和访问权限'
@@ -66,7 +66,7 @@ lab:
 
 在此任务中要部署托管 Active Directory 域控制器的 Azure VM
 
-1. 在同一浏览器窗口中打开另一个浏览器选项卡，然后导航到 [https://github.com/Azure/azure-quickstart-templates/tree/master/active-directory-new-domain](https://github.com/Azure/azure-quickstart-templates/tree/master/active-directory-new-domain)。 
+1. 在同一浏览器窗口中打开另一个浏览器标签页，然后导航到 [https://github.com/Azure/azure-quickstart-templates/tree/master/application-workloads/active-directory/active-directory-new-domain](`https://github.com/Azure/azure-quickstart-templates/tree/master/application-workloads/active-directory/active-directory-new-domain`)。 
 
 1. 在 **“新建 Windows VM 并新建 AD 林、域和 DC”** 页面上，单击 **“部署到 Azure”**。这将自动将浏览器重定向到 Azure 门户中的 **“使用新的 AD 林创建 Azure VM”** 边栏选项卡。
 
@@ -140,7 +140,7 @@ lab:
 
     >**备注**： 如果 **AdatumSync** 条目未出现在 **“目录 +订阅”** 筛选器列表中，则可能需刷新浏览器窗口。
 
-1. 在 **“AdatumSync”** 边栏选项卡中，在 **“管理”** 部分，单击 **“自定义域名”**。
+1. 在 **“AdatumSync\| Azure Active Directory”** 边栏选项卡中，在 **“管理”** 部分单击 **“自定义域名”**。
 
 1. 在 **“AdatumSync \| 自定义域名”** 边栏选项卡上，单击 **“+ 添加自定义域”**。
 
@@ -225,6 +225,8 @@ lab:
 
 1. 在 **“Internet Explorer 增强的安全配置”** 对话框中，将两个选项都设置为 **“关闭”**，然后单击 **“确定”**。
 
+1. 启动 Internet Explorer，导航到 [https://www.microsoft.com/zh-cn/edge/business/download](`https://www.microsoft.com/zh-cn/edge/business/download`)，下载 Microsoft Edge 安装二进制文件，运行安装并使用默认设置配置 Web 浏览器。
+
 1. 在 **“服务器管理器”** 中，单击 **“工具”**，然后在下拉菜单中单击 **“Active Directory 管理中心”**。
 
 1. 在 **“Active Directory 管理中心”**，单击 **“adatum（本地）”**，在 **“任务”** 窗格中，单击 **“新建”**，然后在级联菜单中单击 **“组织单位”**。
@@ -249,7 +251,7 @@ lab:
 
 在此任务中，你将在虚拟机上安装 AD Connect。 
 
-1. 在与 **adVM** 的远程桌面会话中，启动 Internet Explorer，导航至 [Azure 门户](https://portal.azure.com)，然后使用你在上一个练习中创建的 **syncadmin** 用户帐户登录。出现提示时，指定你记录的完整用户名以及 **“Pa55w.rd1234”** 密码。
+1. 在与 **adVM** 的远程桌面会话中，使用 Microsoft Edge 导航至 [Azure 门户](https://portal.azure.com)，然后使用你在上一个练习中创建的 **syncadmin** 用户帐户登录。出现提示时，请指定你记录的完整用户名以及 **“Pa55w.rd1234”** 密码。
 
 1. 在 Azure 门户页面顶部的 **“搜索资源、服务和文档”** 文本框中，键入 **“Azure Active Directory”**，然后按 **“Enter”** 键。
 
@@ -305,7 +307,7 @@ lab:
 
 在此任务中，你将验证目录同步工作是否正常。 
 
-1. 在与 **adVM** 的远程桌面会话中，在显示 Azure 门户的 Internet Explorer 窗口中，导航到 Adatum Lab Azure AD 租户的 **“用户 - 所有用户”** 边栏选项卡。
+1. 在与 **adVM** 的远程桌面会话中，在显示 Azure 门户的 Microsoft Edge 窗口中，导航到 Adatum 实验室 Azure AD 租户的 **“用户”-“所有用户”** 边栏选项卡。
 
 1. 在 **“用户 \| 所有用户”** 边栏选项卡上，请注意，用户对象列表包括 **aduser1** 帐户。 
 
@@ -331,7 +333,7 @@ lab:
     Start-ADSyncSyncCycle -PolicyType Delta
     ```
 
-1. 切换到显示 **“aduser1 \| 个人资料”** 边栏选项卡的 Internet Explorer 窗口，刷新页面，注意 **“部门”** 属性设置为 **“销售”**。
+1. 切换到显示 **“aduser1 \| 个人资料”** 边栏选项卡的 Microsoft Edge 窗口，刷新页面，并注意 **“部门”** 属性已设置为 **“销售”**。
 
     >**备注**： 可能需要等待一分钟，如 **“部门”** 属性仍未设置请再次刷新页面。
 
