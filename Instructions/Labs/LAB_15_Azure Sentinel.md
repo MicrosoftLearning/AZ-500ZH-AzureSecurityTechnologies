@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '15 - Azure Sentinel'
     module: '模块 04 - 管理安全操作'
