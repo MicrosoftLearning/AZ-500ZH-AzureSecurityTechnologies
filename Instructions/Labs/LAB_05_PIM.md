@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '05 - Azure AD Privileged Identity Management'
     module: '第 01 单元 - 管理标识和访问权限'
