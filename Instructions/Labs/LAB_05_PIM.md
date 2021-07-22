@@ -44,7 +44,7 @@ lab:
 
 1. 登录 Azure 门户 **`https://portal.azure.com/`**。
 
-    >**备注**： 确保已登录 **AdatumLab500-4b** Azure AD 租户。你可以使用 **“目录 + 订阅”** 筛选器在 Azure AD 租户之间切换。务必以具有全局管理员角色的用户身份登录。
+    >**备注**： 确保已登录 **AdatumLab500-04** Azure AD 租户。你可以使用 **“目录 + 订阅”** 筛选器在 Azure AD 租户之间切换。务必以具有全局管理员角色的用户身份登录。
 
 1. 在 Azure 门户页面顶部的 **“搜索资源、服务和文档”** 文本框中，键入 **“Azure AD Privileged Identity Management”**，然后按 **Enter** 键。
 

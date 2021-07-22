@@ -270,7 +270,7 @@ lab:
 1. 在 “Cloud Shell” 窗格中的 PowerShell 会话中，运行以下命令创建存储上一个任务中记录的**应用程序（客户端）ID** 的变量（用 **Application (client) ID** 的值替换 `<Azure_AD_Application_ID>`占位符）：
    
     ```powershell
-    $applicationId = '<Azure_AD_Application_ID>”
+    $applicationId = '<Azure_AD_Application_ID>'
     ```
 1. 在“Cloud Shell”窗格中的 PowerShell 会话中，运行以下命令以创建存储密钥保管库名称的变量。
 	```
