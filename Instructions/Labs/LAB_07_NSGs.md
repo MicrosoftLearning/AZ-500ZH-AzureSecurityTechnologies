@@ -330,4 +330,4 @@ lab:
     Remove-AzResourceGroup -Name "AZ500LAB07" -Force -AsJob
     ```
 
-1.  关闭 Cloud Shell**** 窗格。 
+1.  关闭 **Cloud Shell** 窗格。 
