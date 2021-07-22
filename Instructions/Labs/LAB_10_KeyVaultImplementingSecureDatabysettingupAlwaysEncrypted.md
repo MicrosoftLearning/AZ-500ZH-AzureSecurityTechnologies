@@ -248,7 +248,7 @@ lab:
     |设置|值|
     |----|----|
     |描述|**Key1**|
-    |到期|**1 年后**|
+    |到期|**12 个月**|
 	
 1. 单击 **“添加”** 更新应用程序的凭据。
 
@@ -270,7 +270,7 @@ lab:
 1. 在 “Cloud Shell” 窗格中的 PowerShell 会话中，运行以下命令创建存储上一个任务中记录的**应用程序（客户端）ID** 的变量（用 **Application (client) ID** 的值替换 `<Azure_AD_Application_ID>`占位符）：
    
     ```powershell
-    $applicationId = '<Azure_AD_Application_ID>”
+    $applicationId = '<Azure_AD_Application_ID>'
     ```
 1. 在“Cloud Shell”窗格中的 PowerShell 会话中，运行以下命令以创建存储密钥保管库名称的变量。
 	```
@@ -422,7 +422,7 @@ lab:
 
 1. 在项目模板列表中，搜索 **“控制台应用 (.NET Framework)”**，在结果列表中，单击 **“C#”** 对应的 **“控制台应用 (.NET Framework)”**，然后单击 **“下一步”**。
 
-1. 在 **“配置新项目”** 页面上，指定以下设置（将其他设置保留为默认值）：
+1. 在 **“配置新项目”** 页面上，指定以下设置（将其他设置保留为默认值），然后单击 **“创建”**：
 
     |设置|值|
     |---|---|

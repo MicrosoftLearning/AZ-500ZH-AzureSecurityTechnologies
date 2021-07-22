@@ -104,7 +104,7 @@ lab:
 
 1. 确保在“Cloud Shell”窗格左上角的下拉菜单中选中 **“PowerShell”**。
 
-   >**备注**： 要将复制文本粘贴到 Cloud Shell 中，请在窗格窗口中右键单击并选择 **“窗格”**。或者，可以使用 **Shift + Insert** 组合键。
+   >**备注**： 要将复制文本粘贴到 Cloud Shell 中，请在窗格窗口中右键单击并选择 **“粘贴”**。或者，可以使用 **Shift + Insert** 组合键。
 
 1. 在“Cloud Shell”窗格内的 PowerShell 会话中，运行以下命令以创建密码配置文件对象：
 
