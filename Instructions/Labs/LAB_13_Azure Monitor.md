@@ -1,4 +1,4 @@
-﻿---
+---
 lab:
     title: '13 - Azure Monitor'
     module: '模块 04 - 管理安全操作'
